@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Eric Research Group"
+title                    : "Eric"
 title_separator          : "2D Materials & Semiconductor Laboratory | Harbin Institute of Technology, Shenzhen"
 name                     : &name "eric.group@hit.edu.cn"
 description              : &description "We pioneer atomic-precision manufacturing of 2D materials for next-generation semiconductor devices."   # Update this with a general description of your site, this is the default if not overridden by a page
