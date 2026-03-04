@@ -1,92 +1,104 @@
-/*
- * Academic Pages theme
- *
- * For more info: https://github.com/academicpages/academicpages.github.io
- *
- */
+/* ==========================================================================
+   SHARED THEME SETTINGS
+   ========================================================================== */
 
-// Base theme styles
-$primary-color: #2c3e50;
-$secondary-color: #7f8c8d;
-$light-color: #ecf0f1;
-$dark-color: #2c3e50;
-$accent-color: #3498db;
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
 
-// Typography
-$font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif: 'Merriweather', Georgia, Times, serif;
-$font-mono: 'Roboto Mono', Menlo, Monaco, Consolas, monospace;
+/* Used to set the size for <em> */
+$doc-font-size              : 16;
 
-$font-size-base: 16px;
-$font-size-small: 0.875rem;
-$font-size-large: 1.25rem;
+/* Paragraph indention */
+$paragraph-indent           : false; // true, false (default)
+$indent-var                 : 1.3em;
 
-$line-height-base: 1.6;
-$line-height-tight: 1.2;
+/* System typefaces */
+$serif                      : Georgia, Times, serif;
+$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
-// Spacing
-$spacing-unit: 1rem;
-$spacing-sm: $spacing-unit * 0.5;
-$spacing-md: $spacing-unit * 1.5;
-$spacing-lg: $spacing-unit * 3;
+/* Sans serif typefaces */
+$sans-serif-narrow          : $sans-serif;
+$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
 
-// Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+/* Serif typefaces */
+$georgia                    : Georgia, serif;
+$times                      : Times, serif;
+$bodoni                     : "Bodoni MT", serif;
+$calisto                    : "Calisto MT", serif;
+$garamond                   : Garamond, serif;
 
-// Cards
-$card-bg: #ffffff;
-$card-border: #e1e4e8;
-$card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+/* Type scale */
+$type-size-1                : 2.441em;  // ~39.056px
+$type-size-2                : 1.953em;  // ~31.248px
+$type-size-3                : 1.563em;  // ~25.008px
+$type-size-4                : 1.25em;   // ~20px
+$type-size-5                : 1em;      // ~16px
+$type-size-6                : 0.75em;   // ~12px
+$type-size-7                : 0.6875em; // ~11px
+$type-size-8                : 0.625em;  // ~10px
 
-// Buttons
-$btn-bg: $primary-color;
-$btn-color: #ffffff;
-$btn-hover-bg: darken($primary-color, 10%);
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
+$caption-font-family        : $serif;
 
-// Forms
-$form-border: #ced4da;
-$form-focus-border: $accent-color;
-$form-bg: #ffffff;
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
 
-// Tables
-$table-border: #dee2e6;
-$table-stripe-bg: rgba(0,0,0,0.05);
+@include breakpoint-set("to ems", true);
 
-// Utility classes
-.text-primary { color: $primary-color !important; }
-.bg-primary { background-color: $primary-color !important; }
-.border-primary { border-color: $primary-color !important; }
+$small                      : 600px !default;
+$medium                     : 768px !default;
+$medium-wide                : 900px !default;
+$large                      : 925px !default;
+$x-large                    : 1280px !default;
 
-.text-secondary { color: $secondary-color !important; }
-.bg-secondary { background-color: $secondary-color !important; }
-.border-secondary { border-color: $secondary-color !important; }
+/* ==========================================================================
+   Grid
+   ========================================================================== */
 
-// Custom card styles (添加我们的配色修改)
-.card {
-  background-color: #f0f4f8;  // 浅灰背景（替换成你想要的颜色）
-  color: #2d3748;            // 深灰文字
-  border: 1px solid #e2e8f0; // 轻微边框
-  border-radius: 4px;
-  box-shadow: $card-shadow;
-  padding: $spacing-md;
-  margin-bottom: $spacing-md;
-}
+$right-sidebar-width-narrow : auto;
+$right-sidebar-width        : auto;
+$right-sidebar-width-wide   : auto;
 
-.card h3, .card h4 {
-  color: #2d3748;
-  margin-top: 0;
-  margin-bottom: $spacing-sm;
-}
+$susy: (
+    columns: 12,
+    column-width: 120px,
+    gutters: 1/4,
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    container: $large,
+    global-box-sizing: border-box,
+);
 
-.card a {
-  color: #005ea5; // 哈工大蓝链接
-  text-decoration: none;
-}
+/* ==========================================================================
+   BRAND COLORS
+   ========================================================================== */
 
-.card a:hover {
-  color: #004a8c;
-  text-decoration: underline;
-}
+$behance-color              : #1769FF;
+$bluesky-color              : #1184fe;
+$dribbble-color             : #ea4c89;
+$facebook-color             : #3b5998;
+$flickr-color               : #ff0084;
+$foursquare-color           : #0072b1;
+$google-plus-color          : #dd4b39;
+$instagram-color            : #517fa4;
+$kaggle-color               : #20c0ff;
+$lastfm-color               : #d51007;
+$linkedin-color             : #007bb6;
+$mastodon-color             : #6364ff;
+$orcid-color                : #a6ce39;
+$pinterest-color            : #cb2027;
+$rss-color                  : #fa9b39;
+$soundcloud-color           : #ff3300;
+$stackoverflow-color        : #fe7a15;
+$tumblr-color               : #32506d;
+$twitter-color              : #55acee;
+$vimeo-color                : #1ab7ea;
+$vine-color                 : #00bf8f;
+$youtube-color              : #bb0000;
+$xing-color                 : #006567;
+   
