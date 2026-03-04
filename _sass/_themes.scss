@@ -104,17 +104,21 @@ $xing-color                 : #006567;
 
 
 /* =============== CUSTOM CARD STYLES =============== */
-/* 自定义两个白框的颜色 */
-.card {
-  background-color: #f0f4f8 !important; /* 浅灰背景，比纯白柔和 */
-  color: #2d3748 !important;            /* 深灰文字，清晰护眼 */
-  border: 1px solid #e2e8f8 !important;
-}
-
-.card h3, .card h4, .card p, .card li {
-  color: #2d3748 !important; /* 强制覆盖卡片内所有文字颜色 */
-}
-
+/* 强制修改卡片内所有文字颜色，确保清晰 */
+.card,
+.card h3,
+.card h4,
+.card p,
+.card li,
 .card a {
-  color: #005ea5 !important; /* 链接用哈工大蓝 */
+  color: #2d3748 !important; /* 深灰色文字，清晰护眼 */
+}
+
+/* 链接颜色保持哈工大蓝 */
+.card a {
+  color: #005ea5 !important;
+}
+
+.card a:hover {
+  color: #004a8c !important;
 }
