@@ -359,3 +359,10 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+    # Custom Colors
+colors:
+  primary: "#2c5aa0"
+  background: "#f8f9fa"
+  text: "#333333"
+  heading: "#222222"
