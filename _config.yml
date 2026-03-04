@@ -31,29 +31,6 @@ author:
   employer         : "Harbin Institute of Technology"
   uri              : # URL
   email            : "eric.group@hit.edu.cn" 
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:eric.group@hit.edu.cn"
-    - label: "Google Scholar"
-      icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=YOUR_PROFESSOR_ID" # 替换为导师谷歌学术链接
-    - label: "HITSZ"
-      icon: "fas fa-university"
-      url: "https://www.hitsz.edu.cn"
-
-   # Navigation
-navbar_links:
-  - title: "Home"
-    url: "/"
-  - title: "Research"
-    url: "/research/"
-  - title: "Team"
-    url: "/team/"
-  - title: "Publications"
-    url: "/publications/"
-  - title: "Contact"
-    url: "/contact/"
 
   # Academic websites
   academia         : # URL
