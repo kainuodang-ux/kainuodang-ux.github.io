@@ -1,29 +1,92 @@
-/* 哈工大蓝配色方案 - 清晰简洁 */
-$brand-primary: #005ea5;    // 主色调（哈工大官方蓝）
-$brand-text: #333333;       // 正文文字（深灰，护眼清晰）
-$brand-heading: #222222;    // 标题文字（突出层级）
-$brand-background: #f8f9fa; // 背景色（浅灰，不刺眼）
-$link-color: #005ea5;       // 链接颜色（和主色统一）
+/*
+ * Academic Pages theme
+ *
+ * For more info: https://github.com/academicpages/academicpages.github.io
+ *
+ */
 
-/* 基础样式优化 */
-body {
-  color: $brand-text;
-  background-color: $brand-background;
-  font-size: 16px;          // 字体大小，保证清晰
-  line-height: 1.6;         // 行间距，易读性提升
+// Base theme styles
+$primary-color: #2c3e50;
+$secondary-color: #7f8c8d;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$accent-color: #3498db;
+
+// Typography
+$font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Merriweather', Georgia, Times, serif;
+$font-mono: 'Roboto Mono', Menlo, Monaco, Consolas, monospace;
+
+$font-size-base: 16px;
+$font-size-small: 0.875rem;
+$font-size-large: 1.25rem;
+
+$line-height-base: 1.6;
+$line-height-tight: 1.2;
+
+// Spacing
+$spacing-unit: 1rem;
+$spacing-sm: $spacing-unit * 0.5;
+$spacing-md: $spacing-unit * 1.5;
+$spacing-lg: $spacing-unit * 3;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Cards
+$card-bg: #ffffff;
+$card-border: #e1e4e8;
+$card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+// Buttons
+$btn-bg: $primary-color;
+$btn-color: #ffffff;
+$btn-hover-bg: darken($primary-color, 10%);
+
+// Forms
+$form-border: #ced4da;
+$form-focus-border: $accent-color;
+$form-bg: #ffffff;
+
+// Tables
+$table-border: #dee2e6;
+$table-stripe-bg: rgba(0,0,0,0.05);
+
+// Utility classes
+.text-primary { color: $primary-color !important; }
+.bg-primary { background-color: $primary-color !important; }
+.border-primary { border-color: $primary-color !important; }
+
+.text-secondary { color: $secondary-color !important; }
+.bg-secondary { background-color: $secondary-color !important; }
+.border-secondary { border-color: $secondary-color !important; }
+
+// Custom card styles (添加我们的配色修改)
+.card {
+  background-color: #f0f4f8;  // 浅灰背景（替换成你想要的颜色）
+  color: #2d3748;            // 深灰文字
+  border: 1px solid #e2e8f0; // 轻微边框
+  border-radius: 4px;
+  box-shadow: $card-shadow;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
 }
 
-h1, h2, h3, h4 {
-  color: $brand-heading;
-  font-weight: 600;         // 标题加粗，更醒目
+.card h3, .card h4 {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: $spacing-sm;
 }
 
-a {
-  color: $link-color;
-  text-decoration: none;    // 去掉链接下划线，更简洁
+.card a {
+  color: #005ea5; // 哈工大蓝链接
+  text-decoration: none;
 }
 
-a:hover {
-  color: #004a8c;           // 鼠标悬停时加深一点，有交互感
+.card a:hover {
+  color: #004a8c;
   text-decoration: underline;
 }
